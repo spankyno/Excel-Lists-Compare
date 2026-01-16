@@ -1,0 +1,5 @@
+{
+  "name": "Excel's Lists Compare",
+  "description": "Professional tool to compare and merge up to 5 Excel files based on a master column with exact and fuzzy matching capabilities.",
+  "requestFramePermissions": []
+}
