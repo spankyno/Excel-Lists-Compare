@@ -46,6 +46,27 @@
 	  }
 	}
 </script>
+<script>
+(function () {
+  var API_URL  = '  https://aitors-hub-dashboard.asanchezgu.workers.dev//api/v1/visit'; // o tu dominio propio
+  var API_KEY  = 'ak_c88bd4102ef344bf8a24601e84684c4a';         // el api_key de esta app
+  var APP_SLUG = 'blog';                                        // el slug de esta app
+
+  fetch(API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + API_KEY
+    },
+    body: JSON.stringify({
+      app: APP_SLUG,
+      url: window.location.pathname
+    })
+  }).catch(function () {
+    // Fallo silencioso a propósito: el tracking nunca debe romper la web cliente
+  });
+})();
+</script>
 <link rel="stylesheet" href="/index.css">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </head>
